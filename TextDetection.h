@@ -76,10 +76,10 @@ void SWTMedianFilter (cv::Mat& SWTImage, std::vector<Ray> & rays);
 std::vector< std::vector<SWTPoint2d> > findLegallyConnectedComponents (cv::Mat& SWTImage, std::vector<Ray> & rays);
 
 std::vector< std::vector<SWTPoint2d> >
-findLegallyConnectedComponentsRAY (IplImage * SWTImage,
+findLegallyConnectedComponentsRAY (cv::Mat * SWTImage,
                                 std::vector<Ray> & rays);
 
-void componentStats(IplImage * SWTImage,
+void componentStats(cv::Mat * SWTImage,
                                         const std::vector<SWTPoint2d> & component,
                                         float & mean, float & variance, float & median,
                                         int & minx, int & miny, int & maxx, int & maxy);
